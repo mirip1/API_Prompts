@@ -45,7 +45,7 @@ public class PromptCollectionsServiceTest {
     sampleRequest = new PromptCollectionRequest();
     sampleRequest.setNombre("test");
     sampleRequest.setObjetivo("objetivo");
-    sampleRequest.setPrompts(List.of(new PromptRequest("instruccion", "prompt")));
+    sampleRequest.setPrompts(List.of(new PromptRequest("instruccion", "prompt", 1)));
     sampleRequest.setVariables(List.of(new VariableRequest("clave", "valor")));
     entity = new PromptCollection();
     entity.setId(1);

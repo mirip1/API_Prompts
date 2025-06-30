@@ -118,4 +118,17 @@ public class PromptCollectionController {
   public PromptCollectionResponse getByNombre(@PathVariable String nombre) {
     return service.getCollectionByNombre(nombre);
   }
+  
+  /**
+   * Genera y devuelve el prompt completo para la colección indicada.
+   * 
+   * @param nombre nombre de la colección
+   * @return texto con todos los prompts concatenados y variables sustituidas
+   */
+  @GetMapping("/{nombre}/generatePrompt")
+  public ResponseEntity<String> generatePrompt(@PathVariable String nombre) {
+    String result = service.generatePrompt(nombre);
+    return ResponseEntity.ok(result);
+  }
+  
 }

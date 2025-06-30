@@ -15,4 +15,5 @@ public class PromptResponse {
   private Integer id;
   private String instruccion;
   private String promptText;
+  private Integer order;
 }

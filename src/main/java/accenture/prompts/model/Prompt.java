@@ -37,6 +37,9 @@ public class Prompt {
 
   @Column(name = "prompt_text", columnDefinition = "TEXT", nullable = false)
   private String promptText;
+  
+  @Column(name = "order_index")
+  private Integer orderIndex;
 
 }
 

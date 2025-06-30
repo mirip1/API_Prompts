@@ -14,4 +14,5 @@ import lombok.Setter;
 public class PromptRequest {
   private String instruccion;
   private String promptText;
+  private Integer order;
 }

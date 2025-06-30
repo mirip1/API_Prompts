@@ -76,7 +76,8 @@ public class PromptCollectionMapper {
    * @return entidad
    */
   public Prompt toPromptEntity(PromptRequest request) {
-    Prompt p = Prompt.builder().promptText(request.getPromptText()).instruccion(request.getInstruccion()).build();
+    Prompt p = Prompt.builder().promptText(request.getPromptText()).instruccion(request.getInstruccion())
+        .orderIndex(request.getOrder()).build();
     return p;
   }
 
@@ -99,7 +100,7 @@ public class PromptCollectionMapper {
    */
   private PromptResponse toPromptResponse(Prompt entity) {
     return PromptResponse.builder().id(entity.getId()).instruccion(entity.getInstruccion())
-        .promptText(entity.getPromptText()).build();
+        .promptText(entity.getPromptText()).order(entity.getOrderIndex()).build();
   }
 
   /**
